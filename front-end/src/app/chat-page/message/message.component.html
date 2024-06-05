@@ -1,0 +1,12 @@
+<div [id]="'message_' + no" class="flex my-3 gap-4 items-start justify-end"
+  [ngClass]="(userMessage?.fromUserId?._id != currentUser?.id) ? 'flex-row-reverse' : '' ">
+  <div>
+    <div class="bg-blue-500 dark:bg-blue-600 rounded-lg px-3 py-2 text-sm text-white">
+      {{ userMessage.message }}
+    </div>
+  </div>
+  <div class="flex-shrink-0">
+    <img [name]="userMessage?._id" [id]="userMessage?._id" class="h-10 w-10 rounded-full"
+      src={{userMessage?.fromUserId?.imagePath}} alt="User Avatar From">
+  </div>
+</div>

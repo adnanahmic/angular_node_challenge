@@ -1,0 +1,10 @@
+<div
+  class="flex container mx-auto max-w-lg max-h-screen flex-col bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden relative">
+  <h1
+    class="flex items-center text-2xl dark:text-white p-4 border-b-black dark:border-b-white border-b-2 justify-between">
+    {{ this?.userData?.name }}
+    <a class="cursor-pointer" (click)="logout()">Logout</a>
+  </h1>
+  <app-chat></app-chat>
+  <app-create-message></app-create-message>
+</div>

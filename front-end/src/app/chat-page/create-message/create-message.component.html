@@ -1,0 +1,15 @@
+<div class="p-4 flex shadow-t-lg absolute bottom-0 w-full bg-white dark:bg-gray-700">
+  <form (ngSubmit)="onSubmit()" class="flex items-start w-full">
+    <textarea
+      class="w-full rounded-md border-2 dark:border-gray-600 dark:bg-white dark:bg-gray-600 px-4 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500"
+      required name="text" [(ngModel)]="message.message">
+  </textarea>
+
+
+    <button type="submit" [disabled]="!message.message || message.status === 'pending'"
+      class="ml-2 bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      [ngClass]="{ 'bg-gray-400': message.status === 'pending' }">
+      Send
+    </button>
+  </form>
+</div>

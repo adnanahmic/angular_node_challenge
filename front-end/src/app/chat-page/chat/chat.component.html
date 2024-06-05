@@ -1,0 +1,16 @@
+<div #chatListContainer class="p-4 overflow-y-auto pb-[96px] custom_scroll" style="max-height: calc(100vh - 66px);">
+  @defer(on timer(5s)){
+  @for(userMessage of messages; let index = $index; track trackById){
+  <app-message [userMessage]="userMessage" [no]="(index+1)"></app-message>
+  }@empty {
+  <div class="dark:text-white text-center p-4">
+    No messages!
+  </div>
+  }
+  }
+  @placeholder {
+  <div class="dark:text-white text-center p-4">
+    loading...
+  </div>
+  }
+</div>

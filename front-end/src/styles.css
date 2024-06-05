@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #d4d4d4;
+}
+
+.custom_scroll {
+  scrollbar-color: rgba(217, 217, 217, 0.9) transparent;
+}
+.custom_scroll::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  height: 1rem;
+  width: 0.5rem;
+}
+
+.custom_scroll::-webkit-scrollbar-track,
+.custom_scroll::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  border-radius: 9999px;
+  border-width: 1px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
